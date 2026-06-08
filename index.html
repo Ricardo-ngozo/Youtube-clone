@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/download.svg">
+  <!-- Light/dark mode: restore saved theme before paint (added by Cursor assistant) -->
+  <script>
+    if (localStorage.getItem('yt-theme') === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="left">
+      <button class="menu-btn" aria-label="Open menu">
+        <img src="./assets/download (2).svg" alt="">
+      </button>
+      <a class="logo-container" href="#" aria-label="YouTube home">
+        <img class="logo-img" src="./assets/download.svg" alt="">
+        <span class="logo-text">YouTube</span>
+        <span class="country-code">ZA</span>
+      </a>
+    </div>
+
+    <form class="center">
+      <label class="search-container" aria-label="Search">
+        <input type="search" value="google deepmind the thinking game" class="search-input">
+        <button class="search-btn" type="submit" aria-label="Search">
+          <img src="./assets/download (1).svg" alt="">
+        </button>
+      </label>
+    </form>
+
+    <div class="right">
+      <!-- Light/dark mode toggle button (added by Cursor assistant) -->
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false">
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">&#9790;</span>
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">&#9728;</span>
+      </button>
+      <button class="create-btn" type="button">
+        <img src="./assets/download (3).svg" alt="">
+        <span>Create</span>
+      </button>
+      <button class="icon-btn" type="button" aria-label="Notifications">
+        <img src="./assets/download (4).svg" alt="">
+        <span class="notification-dot"></span>
+      </button>
+      <button class="profile-btn" type="button" aria-label="Profile">
+        <img src="./assets/ChatGPT Image May 14, 2026, 10_57_41 AM.png" alt="">
+      </button>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav aria-label="Primary">
+      <a class="nav-item active" href="#"><span>Home</span></a>
+      <a class="nav-item" href="#"><span>Shorts</span></a>
+      <a class="nav-item" href="#"><span>Subscriptions</span></a>
+      <hr>
+      <a class="nav-item" href="#"><span>You</span></a>
+      <a class="nav-item" href="#"><span>History</span></a>
+      <a class="nav-item" href="#"><span>Playlists</span></a>
+      <a class="nav-item" href="#"><span>Your videos</span></a>
+      <a class="nav-item" href="#"><span>Watch later</span></a>
+      <hr>
+      <a class="nav-item" href="#"><span>Trending</span></a>
+      <a class="nav-item" href="#"><span>Music</span></a>
+      <a class="nav-item" href="#"><span>Gaming</span></a>
+      <a class="nav-item" href="#"><span>Sports</span></a>
+      <a class="nav-item" href="#"><span>Podcasts</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section class="chips" aria-label="Topics">
+      <button class="chip active" type="button">All</button>
+      <button class="chip" type="button">Premier League</button>
+      <button class="chip" type="button">Podcasts</button>
+      <button class="chip" type="button">Superhero movies</button>
+      <button class="chip" type="button">Drake</button>
+      <button class="chip" type="button">Gaming</button>
+      <button class="chip" type="button">Music</button>
+      <button class="chip" type="button">Mixes</button>
+      <button class="chip" type="button">Apple</button>
+      <button class="chip" type="button">FIFA World Cup</button>
+    </section>
+
+    <!-- Video grid with hover preview thumbnails (added by Cursor assistant) -->
+    <div class="grid">
+      <article class="card">
+        <a class="thumb-link" href="./assets/YTDown_YouTube_Bruno-Fernandes-Roy-Keane-Twisted-My-Wor_Media_qel8Fyt78fk_001_1080p.mp4" target="_blank">
+          <div class="thumb" data-preview-src="./assets/YTDown_YouTube_Bruno-Fernandes-Roy-Keane-Twisted-My-Wor_Media_qel8Fyt78fk_001_1080p.mp4">
+            <img src="https://img.youtube.com/vi/qel8Fyt78fk/maxresdefault.jpg" alt="">
+            <span class="duration">1:34:43</span>
+          </div>
+        </a>
+        <div class="video-info">
+          <img src="./assets/45e7af9515da026bb4cc659b55b6b049.jpg" alt="">
+          <div>
+            <h3>Roy Keane twisted my words, Bruno Fernandes responds</h3>
+            <p>DOAC</p>
+            <p>2.1M views • 6 hours ago</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb-link" href="./assets/YTDown_YouTube_EREN-vs-FEMALE-TITAN-Anime-VIRGIN-Reacts_Media_JFnu-2AqX8A_001_1080p.mp4" target="_blank">
+          <div class="thumb anime" data-preview-src="./assets/YTDown_YouTube_EREN-vs-FEMALE-TITAN-Anime-VIRGIN-Reacts_Media_JFnu-2AqX8A_001_1080p.mp4">
+            <img src="https://img.youtube.com/vi/JFnu-2AqX8A/maxresdefault.jpg" alt="">
+            <span class="duration">22:09</span>
+          </div>
+        </a>
+        <div class="video-info">
+          <img src="https://img.youtube.com/vi/JFnu-2AqX8A/maxresdefault.jpg" alt="">
+          <div>
+            <h3>NERF HER!! Anime reaction and funniest moments</h3>
+            <p>VERTICLE</p>
+            <p>8.4K views • 1 day ago</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb-link" href="./assets/YTDown_YouTube_EVERY-Drake-Diss-on-Iceman-ACTUALLY-Expl_Media_VW-XlKM0_yA_001_720p.mp4">
+          <div class="thumb music" data-preview-src="./assets/YTDown_YouTube_EVERY-Drake-Diss-on-Iceman-ACTUALLY-Expl_Media_VW-XlKM0_yA_001_720p.mp4">
+            <img src="https://img.youtube.com/vi/VW-XlKM0_yA/maxresdefault.jpg" alt="">
+            <span class="duration">12:31</span>
+          </div>
+        </a>
+        <div class="video-info">
+          <img src="./assets/ChatGPT Image May 14, 2026, 10_57_41 AM.png" alt="">
+          <div>
+            <h3>Drake dissing explained: every bar people missed</h3>
+            <p>Music Breakdown</p>
+            <p>1.2M views • 3 days ago</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb-link" href="#">
+          <div class="thumb">
+            <img src="https://img.youtube.com/vi/3MBLnjSyKJk/hqdefault.jpg" alt="">
+            <span class="duration">15:18</span>
+          </div>
+        </a>
+        <div class="video-info">
+          <img src="./assets/ChatGPT Image May 14, 2026, 10_57_41 AM.png" alt="">
+          <div>
+            <h3>Two Trebles, one city</h3>
+            <p>Premier League</p>
+            <p>524K views • 4 days ago</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb-link" href="#">
+          <div class="thumb analysis" data-preview-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+            <img src="https://img.youtube.com/vi/IPSqfUrVy7Y/hqdefault.jpg" alt="">
+            <span class="duration">10:04</span>
+          </div>
+        </a>
+        <div class="video-info">
+          <img src="./assets/ChatGPT Image May 14, 2026, 10_57_41 AM.png" alt="">
+          <div>
+            <h3>Why Carrick is still underrated by modern football fans</h3>
+            <p>Sky sports premier league</p>
+            <p>37K views • 5 days ago</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb-link" href="#">
+          <div class="thumb hiphop" data-preview-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
+            <img src="https://img.youtube.com/vi/BTffArlW9I4/maxresdefault.jpg" alt=""> 
+            <span class="duration">8:56</span>
+          </div>
+        </a>
+        <div class="video-info">
+          <img src="./assets/ChatGPT Image May 14, 2026, 10_57_41 AM.png" alt="">
+          <div>
+            <h3>A$AP Rocky checked Drake and hip-hop noticed</h3>
+            <p>HipHop News</p>
+            <p>890K views • 1 week ago</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+    <section class="shorts-section">
+      <div class="section-heading">
+        <h2>Shorts</h2>
+        <button type="button">Show all</button>
+      </div>
+      <div class="shorts">
+        <article class="short">
+          <div class="short-box cup">
+            <img src="https://img.youtube.com/vi/ebvs9zqqsfc/mqdefault.jpg" alt="England out of World Cup?">
+          </div>
+          <h3>England out of World Cup?</h3>
+          <p>1.8M views</p>
+        </article>
+        <article class="short">
+          <div class="short-box drake">
+            <img src="https://img.youtube.com/vi/n08ZK6kwHn8/hqdefault.jpg" alt="Drake beef explained fast">
+          </div>
+          <h3>Drake beef explained fast</h3>
+          <p>742K views</p>
+        </article>
+        <article class="short">
+          <div class="short-box drama">
+            <img src="https://img.youtube.com/vi/hdV67SHhsZs/hqdefault.jpg" alt="Man United drama">
+          </div>
+          <h3>Man United drama</h3>
+          <p>456K views</p>
+        </article>
+        <article class="short">
+          <div class="short-box reaction">
+            <img src="https://img.youtube.com/vi/JFnu-2AqX8A/hqdefault.jpg" alt="Football reaction cam">
+          </div>
+          <h3>Football reaction cam</h3>
+          <p>299K views</p>
+        </article>
+        <article class="short">
+          <div class="short-box gaming">
+            <img src="https://img.youtube.com/vi/aX8IkyAlfv4/hqdefault.jpg" alt="Gaming clutch moment">
+          </div>
+          <h3>Gaming clutch moment</h3>
+          <p>188K views</p>
+        </article>
+      </div>
+    </section>
+
+   
+
+    <section class="lower-grid">
+      <div class="panel live-panel">
+        <div class="section-heading">
+          <h2>Live Now</h2>
+          <button type="button">Join</button>
+        </div>
+        <p class="live-title">Premier League watchalong, music breaks, and chat reactions.</p>
+        <div class="live-meter"><span></span></div>
+        <p class="muted">24.6K watching</p>
+      </div>
+
+      <div class="panel">
+        <div class="section-heading">
+          <h2>Premium</h2>
+          <button type="button">Reactivate</button>
+        </div>
+        <p>Your Premium benefits have just ended. Reactivate to keep the ad-free experience, background play, and downloads.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Light/dark mode toggle logic (added by Cursor assistant) -->
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+
+      function setTheme(theme) {
+        const isLight = theme === 'light';
+        if (isLight) {
+          root.setAttribute('data-theme', 'light');
+        } else {
+          root.removeAttribute('data-theme');
+        }
+        localStorage.setItem('yt-theme', isLight ? 'light' : 'dark');
+        toggle.setAttribute('aria-pressed', String(isLight));
+      }
+
+      setTheme(localStorage.getItem('yt-theme') === 'light' ? 'light' : 'dark');
+
+      toggle.addEventListener('click', function () {
+        const isLight = root.getAttribute('data-theme') === 'light';
+        setTheme(isLight ? 'dark' : 'light');
+      });
+    })();
+  </script>
+
+  <!-- Thumbnail hover preview — plays muted video on hover like YouTube (added by Cursor assistant) -->
+  <script>
+    (function () {
+      var PREVIEW_DELAY = 400;
+      var PREVIEW_MAX_SECONDS = 10;
+
+      document.querySelectorAll('.thumb[data-preview-src]').forEach(function (thumb) {
+        var src = thumb.getAttribute('data-preview-src');
+        if (!src) return;
+
+        var video = document.createElement('video');
+        video.className = 'thumb-preview-video';
+        video.muted = true;
+        video.playsInline = true;
+        video.preload = 'metadata';
+        video.setAttribute('aria-hidden', 'true');
+        video.src = src;
+
+        var bar = document.createElement('div');
+        bar.className = 'thumb-preview-bar';
+        bar.innerHTML = '<span class="thumb-preview-bar-fill"></span>';
+        bar.setAttribute('aria-hidden', 'true');
+
+        thumb.appendChild(video);
+        thumb.appendChild(bar);
+
+        var fill = bar.querySelector('.thumb-preview-bar-fill');
+        var hoverTimer = null;
+        var rafId = null;
+
+        function stopPreview() {
+          clearTimeout(hoverTimer);
+          hoverTimer = null;
+          if (rafId) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+          }
+          thumb.classList.remove('is-previewing');
+          video.pause();
+          video.currentTime = 0;
+          fill.style.width = '0%';
+        }
+
+        function updateBar() {
+          if (!thumb.classList.contains('is-previewing')) return;
+          var duration = video.duration || PREVIEW_MAX_SECONDS;
+          var progress = Math.min(video.currentTime / duration, 1);
+          fill.style.width = (progress * 100) + '%';
+          if (video.currentTime >= PREVIEW_MAX_SECONDS) {
+            video.currentTime = 0;
+          }
+          rafId = requestAnimationFrame(updateBar);
+        }
+
+        function startPreview() {
+          thumb.classList.add('is-previewing');
+          video.play().catch(function () {
+            thumb.classList.remove('is-previewing');
+          });
+          rafId = requestAnimationFrame(updateBar);
+        }
+
+        thumb.addEventListener('mouseenter', function () {
+          hoverTimer = setTimeout(startPreview, PREVIEW_DELAY);
+        });
+
+        thumb.addEventListener('mouseleave', stopPreview);
+      });
+    })();
+  </script>
+</body>
+</html>
