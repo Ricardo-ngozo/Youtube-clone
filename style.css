@@ -7,6 +7,7 @@
   padding: 0;
 }
 
+/* Theme tokens — dark mode is default; light mode added via [data-theme="light"] (Cursor assistant) */
 :root {
   --bg: #0f0f0f;
   --bg-soft: #181818;
@@ -17,6 +18,54 @@
   --muted: #aaa;
   --red: #ff0033;
   --blue: #3ea6ff;
+  --header-bg: rgba(15, 15, 15, 0.96);
+  --header-border: rgba(48, 48, 48, 0.5);
+  --search-bg: #121212;
+  --search-btn-bg: #222222;
+  --search-btn-hover: #2b2b2b;
+  --chips-bg: rgba(15, 15, 15, 0.96);
+  --chip-active-text: #111111;
+  --chip-active-bg: #f1f1f1;
+  --hero-bg:
+    linear-gradient(115deg, rgba(255, 0, 51, 0.24), rgba(15, 15, 15, 0.2) 45%),
+    radial-gradient(circle at 82% 30%, rgba(62, 166, 255, 0.18), transparent 34%),
+    #141414;
+  --hero-border: rgba(255, 255, 255, 0.1);
+  --hero-text: #d8d8d8;
+  --hero-card-bg: #0d0d0d;
+  --channel-stats-bg: rgba(15, 15, 15, 0.82);
+  --channel-stats-border: rgba(255, 255, 255, 0.16);
+  --panel-text: #d2d2d2;
+  --icon-invert: 1;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-soft: #f9f9f9;
+  --surface: #f2f2f2;
+  --surface-hover: #e5e5e5;
+  --line: #e0e0e0;
+  --text: #0f0f0f;
+  --muted: #606060;
+  --header-bg: rgba(255, 255, 255, 0.96);
+  --header-border: rgba(0, 0, 0, 0.1);
+  --search-bg: #ffffff;
+  --search-btn-bg: #f8f8f8;
+  --search-btn-hover: #f0f0f0;
+  --chips-bg: rgba(255, 255, 255, 0.96);
+  --chip-active-text: #ffffff;
+  --chip-active-bg: #0f0f0f;
+  --hero-bg:
+    linear-gradient(115deg, rgba(255, 0, 51, 0.12), rgba(255, 255, 255, 0.4) 45%),
+    radial-gradient(circle at 82% 30%, rgba(62, 166, 255, 0.14), transparent 34%),
+    #f3f3f3;
+  --hero-border: rgba(0, 0, 0, 0.08);
+  --hero-text: #404040;
+  --hero-card-bg: #ececec;
+  --channel-stats-bg: rgba(255, 255, 255, 0.92);
+  --channel-stats-border: rgba(0, 0, 0, 0.1);
+  --panel-text: #404040;
+  --icon-invert: 0;
 }
 
 body {
@@ -47,8 +96,8 @@ a {
   z-index: 20;
   height: 56px;
   padding: 0 16px;
-  background: rgba(15, 15, 15, 0.96);
-  border-bottom: 1px solid rgba(48, 48, 48, 0.5);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,6 +123,7 @@ a {
 
 .menu-btn,
 .icon-btn,
+.theme-toggle,
 .profile-btn {
   width: 40px;
   height: 40px;
@@ -86,6 +136,7 @@ a {
 
 .menu-btn:hover,
 .icon-btn:hover,
+.theme-toggle:hover,
 .profile-btn:hover,
 .create-btn:hover {
   background: var(--surface-hover);
@@ -95,7 +146,25 @@ a {
 .icon-btn img {
   width: 23px;
   height: 23px;
-  filter: invert(1);
+  filter: invert(var(--icon-invert));
+}
+
+/* Light/dark toggle icons (Cursor assistant) */
+.theme-toggle {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.theme-icon {
+  display: none;
+}
+
+:root:not([data-theme="light"]) .theme-icon-moon {
+  display: block;
+}
+
+[data-theme="light"] .theme-icon-sun {
+  display: block;
 }
 
 .logo-container {
@@ -139,7 +208,7 @@ a {
   height: 40px;
   padding: 0 18px;
   color: var(--text);
-  background: #121212;
+  background: var(--search-bg);
   border: 1px solid var(--line);
   border-radius: 40px 0 0 40px;
   outline: none;
@@ -155,18 +224,18 @@ a {
   border: 1px solid var(--line);
   border-left: 0;
   border-radius: 0 40px 40px 0;
-  background: #222;
+  background: var(--search-btn-bg);
   display: grid;
   place-items: center;
 }
 
 .search-btn:hover {
-  background: #2b2b2b;
+  background: var(--search-btn-hover);
 }
 
 .search-btn img {
   width: 22px;
-  filter: invert(1);
+  filter: invert(var(--icon-invert));
 }
 
 .create-btn {
@@ -184,7 +253,7 @@ a {
 
 .create-btn img {
   width: 18px;
-  filter: invert(1);
+  filter: invert(var(--icon-invert));
 }
 
 .icon-btn {
@@ -257,7 +326,7 @@ a {
   z-index: 10;
   margin: -2px -24px 20px;
   padding: 12px 24px;
-  background: rgba(15, 15, 15, 0.96);
+  background: var(--chips-bg);
   display: flex;
   gap: 12px;
   overflow-x: auto;
@@ -285,20 +354,17 @@ a {
 }
 
 .chip.active {
-  color: #111;
-  background: #f1f1f1;
+  color: var(--chip-active-text);
+  background: var(--chip-active-bg);
 }
 
 .hero {
   min-height: 360px;
   margin-bottom: 30px;
   padding: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--hero-border);
   border-radius: 8px;
-  background:
-    linear-gradient(115deg, rgba(255, 0, 51, 0.24), rgba(15, 15, 15, 0.2) 45%),
-    radial-gradient(circle at 82% 30%, rgba(62, 166, 255, 0.18), transparent 34%),
-    #141414;
+  background: var(--hero-bg);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
   gap: 28px;
@@ -324,7 +390,7 @@ a {
 .hero-text {
   max-width: 650px;
   margin-top: 16px;
-  color: #d8d8d8;
+  color: var(--hero-text);
   font-size: 17px;
   line-height: 1.55;
 }
@@ -369,7 +435,7 @@ a {
   align-self: stretch;
   min-height: 290px;
   border-radius: 8px;
-  background: #0d0d0d;
+  background: var(--hero-card-bg);
   position: relative;
   overflow: hidden;
 }
@@ -388,9 +454,9 @@ a {
   right: 14px;
   bottom: 14px;
   padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--channel-stats-border);
   border-radius: 8px;
-  background: rgba(15, 15, 15, 0.82);
+  background: var(--channel-stats-bg);
   display: flex;
   justify-content: space-between;
   gap: 14px;
@@ -657,7 +723,7 @@ a {
 }
 
 .panel p {
-  color: #d2d2d2;
+  color: var(--panel-text);
   line-height: 1.55;
 }
 
@@ -670,7 +736,7 @@ a {
   height: 8px;
   margin: 20px 0 10px;
   border-radius: 999px;
-  background: #303030;
+  background: var(--line);
   overflow: hidden;
 }
 
