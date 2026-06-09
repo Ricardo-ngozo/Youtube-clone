@@ -89,11 +89,20 @@
       <button class="chip" type="button">FIFA World Cup</button>
     </section>
 
-    <!-- Video grid with hover preview thumbnails (added by Cursor assistant) -->
+    <!--
+      ============================================================
+      VIDEO GRID
+      To add your video: set data-video-id="YOUR_YOUTUBE_VIDEO_ID"
+      on the .thumb element and update the href on .thumb-link.
+      The thumbnail img src uses the same ID automatically via JS.
+      ============================================================
+    -->
     <div class="grid">
+
       <article class="card">
-        <a class="thumb-link" href="./assets/YTDown_YouTube_Bruno-Fernandes-Roy-Keane-Twisted-My-Wor_Media_qel8Fyt78fk_001_1080p.mp4" target="_blank">
-          <div class="thumb" data-preview-src="./assets/YTDown_YouTube_Bruno-Fernandes-Roy-Keane-Twisted-My-Wor_Media_qel8Fyt78fk_001_1080p.mp4">
+        <!-- 👇 Replace YOUR_VIDEO_ID with a real YouTube video ID -->
+        <a class="thumb-link" href="https://www.youtube.com/watch?v=qel8Fyt78fk" target="_blank">
+          <div class="thumb" data-video-id="qel8Fyt78fk">
             <img src="https://img.youtube.com/vi/qel8Fyt78fk/maxresdefault.jpg" alt="">
             <span class="duration">1:34:43</span>
           </div>
@@ -109,8 +118,9 @@
       </article>
 
       <article class="card">
-        <a class="thumb-link" href="./assets/YTDown_YouTube_EREN-vs-FEMALE-TITAN-Anime-VIRGIN-Reacts_Media_JFnu-2AqX8A_001_1080p.mp4" target="_blank">
-          <div class="thumb anime" data-preview-src="./assets/YTDown_YouTube_EREN-vs-FEMALE-TITAN-Anime-VIRGIN-Reacts_Media_JFnu-2AqX8A_001_1080p.mp4">
+        <!-- 👇 Replace YOUR_VIDEO_ID with a real YouTube video ID -->
+        <a class="thumb-link" href="https://youtu.be/s0C-pCccE8o?si=z-SkzJleP3duqiXd" target="_blank">
+          <div class="thumb" data-video-id="SkzJleP3duqiXd">
             <img src="https://img.youtube.com/vi/JFnu-2AqX8A/maxresdefault.jpg" alt="">
             <span class="duration">22:09</span>
           </div>
@@ -126,8 +136,9 @@
       </article>
 
       <article class="card">
-        <a class="thumb-link" href="./assets/YTDown_YouTube_EVERY-Drake-Diss-on-Iceman-ACTUALLY-Expl_Media_VW-XlKM0_yA_001_720p.mp4">
-          <div class="thumb music" data-preview-src="./assets/YTDown_YouTube_EVERY-Drake-Diss-on-Iceman-ACTUALLY-Expl_Media_VW-XlKM0_yA_001_720p.mp4">
+        
+        <a class="thumb-link" href="https://youtu.be/qel8Fyt78fk?si=R8DeIHkHim6hku_v" target="_blank">
+          <div class="thumb" data-video-id="VW-XlKM0_yA">
             <img src="https://img.youtube.com/vi/VW-XlKM0_yA/maxresdefault.jpg" alt="">
             <span class="duration">12:31</span>
           </div>
@@ -143,8 +154,9 @@
       </article>
 
       <article class="card">
-        <a class="thumb-link" href="#">
-          <div class="thumb">
+        <!-- 👇 Replace YOUR_VIDEO_ID with a real YouTube video ID -->
+        <a class="thumb-link" href="https://youtu.be/3MBLnjSyKJk?si=vlwC7dGhA2qdqv1_" target="_blank">
+          <div class="thumb" data-video-id="3MBLnjSyKJk">
             <img src="https://img.youtube.com/vi/3MBLnjSyKJk/hqdefault.jpg" alt="">
             <span class="duration">15:18</span>
           </div>
@@ -160,8 +172,9 @@
       </article>
 
       <article class="card">
-        <a class="thumb-link" href="#">
-          <div class="thumb analysis" data-preview-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+        <!-- 👇 Replace YOUR_VIDEO_ID with a real YouTube video ID -->
+        <a class="thumb-link" href="https://www.youtube.com/watch?v=IPSqfUrVy7Y" target="_blank">
+          <div class="thumb" data-video-id="IPSqfUrVy7Y">
             <img src="https://img.youtube.com/vi/IPSqfUrVy7Y/hqdefault.jpg" alt="">
             <span class="duration">10:04</span>
           </div>
@@ -177,9 +190,10 @@
       </article>
 
       <article class="card">
-        <a class="thumb-link" href="#">
-          <div class="thumb hiphop" data-preview-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
-            <img src="https://img.youtube.com/vi/BTffArlW9I4/maxresdefault.jpg" alt=""> 
+        <!-- 👇 Replace YOUR_VIDEO_ID with a real YouTube video ID -->
+        <a class="thumb-link" href="https://www.youtube.com/watch?v=BTffArlW9I4" target="_blank">
+          <div class="thumb" data-video-id="BTffArlW9I4">
+            <img src="https://img.youtube.com/vi/BTffArlW9I4/maxresdefault.jpg" alt="">
             <span class="duration">8:56</span>
           </div>
         </a>
@@ -192,53 +206,70 @@
           </div>
         </div>
       </article>
+
     </div>
-    
+
+    <!--
+      ============================================================
+      SHORTS SECTION
+      To add your short: set data-video-id="YOUR_YOUTUBE_VIDEO_ID"
+      on the .short-box element. Iframe loads on hover.
+      ============================================================
+    -->
     <section class="shorts-section">
       <div class="section-heading">
         <h2>Shorts</h2>
         <button type="button">Show all</button>
       </div>
       <div class="shorts">
+
         <article class="short">
-          <div class="short-box cup">
+          <!-- 👇 Replace YOUR_VIDEO_ID -->
+          <div class="short-box" data-video-id="ebvs9zqqsfc">
             <img src="https://img.youtube.com/vi/ebvs9zqqsfc/mqdefault.jpg" alt="England out of World Cup?">
           </div>
           <h3>England out of World Cup?</h3>
           <p>1.8M views</p>
         </article>
+
         <article class="short">
-          <div class="short-box drake">
+          <!-- 👇 Replace YOUR_VIDEO_ID -->
+          <div class="short-box" data-video-id="n08ZK6kwHn8">
             <img src="https://img.youtube.com/vi/n08ZK6kwHn8/hqdefault.jpg" alt="Drake beef explained fast">
           </div>
           <h3>Drake beef explained fast</h3>
           <p>742K views</p>
         </article>
+
         <article class="short">
-          <div class="short-box drama">
+          <!-- 👇 Replace YOUR_VIDEO_ID -->
+          <div class="short-box" data-video-id="hdV67SHhsZs">
             <img src="https://img.youtube.com/vi/hdV67SHhsZs/hqdefault.jpg" alt="Man United drama">
           </div>
           <h3>Man United drama</h3>
           <p>456K views</p>
         </article>
+
         <article class="short">
-          <div class="short-box reaction">
+          <!-- 👇 Replace YOUR_VIDEO_ID -->
+          <div class="short-box" data-video-id="JFnu-2AqX8A">
             <img src="https://img.youtube.com/vi/JFnu-2AqX8A/hqdefault.jpg" alt="Football reaction cam">
           </div>
           <h3>Football reaction cam</h3>
           <p>299K views</p>
         </article>
+
         <article class="short">
-          <div class="short-box gaming">
+          <!-- 👇 Replace YOUR_VIDEO_ID -->
+          <div class="short-box" data-video-id="aX8IkyAlfv4">
             <img src="https://img.youtube.com/vi/aX8IkyAlfv4/hqdefault.jpg" alt="Gaming clutch moment">
           </div>
           <h3>Gaming clutch moment</h3>
           <p>188K views</p>
         </article>
+
       </div>
     </section>
-
-   
 
     <section class="lower-grid">
       <div class="panel live-panel">
@@ -287,75 +318,67 @@
     })();
   </script>
 
-  <!-- Thumbnail hover preview — plays muted video on hover like YouTube (added by Cursor assistant) -->
+  <!--
+    ============================================================
+    IFRAME HOVER PREVIEW SCRIPT
+    Works for both .grid .thumb[data-video-id] (landscape)
+    and .short-box[data-video-id] (portrait shorts).
+    On hover it injects an autoplay muted iframe; on leave it removes it.
+    ============================================================
+  -->
   <script>
     (function () {
-      var PREVIEW_DELAY = 400;
-      var PREVIEW_MAX_SECONDS = 10;
+      var DELAY = 400;
 
-      document.querySelectorAll('.thumb[data-preview-src]').forEach(function (thumb) {
-        var src = thumb.getAttribute('data-preview-src');
-        if (!src) return;
+      function attachPreview(el) {
+        var videoId = el.getAttribute('data-video-id');
+        if (!videoId) return;
 
-        var video = document.createElement('video');
-        video.className = 'thumb-preview-video';
-        video.muted = true;
-        video.playsInline = true;
-        video.preload = 'metadata';
-        video.setAttribute('aria-hidden', 'true');
-        video.src = src;
+        var iframe = null;
+        var timer = null;
 
-        var bar = document.createElement('div');
-        bar.className = 'thumb-preview-bar';
-        bar.innerHTML = '<span class="thumb-preview-bar-fill"></span>';
-        bar.setAttribute('aria-hidden', 'true');
+        function showIframe() {
+          if (iframe) return;
+          iframe = document.createElement('iframe');
+          iframe.className = 'thumb-preview-iframe';
+          iframe.setAttribute('aria-hidden', 'true');
+          iframe.setAttribute('allow', 'autoplay; encrypted-media');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('frameborder', '0');
+          // autoplay=1, mute=1, controls=0 — pure preview
+          iframe.src =
+            'https://www.youtube.com/embed/' +
+            videoId +
+            '?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=' +
+            videoId;
+          el.appendChild(iframe);
+          el.classList.add('is-previewing');
+        }
 
-        thumb.appendChild(video);
-        thumb.appendChild(bar);
-
-        var fill = bar.querySelector('.thumb-preview-bar-fill');
-        var hoverTimer = null;
-        var rafId = null;
-
-        function stopPreview() {
-          clearTimeout(hoverTimer);
-          hoverTimer = null;
-          if (rafId) {
-            cancelAnimationFrame(rafId);
-            rafId = null;
+        function hideIframe() {
+          clearTimeout(timer);
+          timer = null;
+          if (iframe) {
+            iframe.remove();
+            iframe = null;
           }
-          thumb.classList.remove('is-previewing');
-          video.pause();
-          video.currentTime = 0;
-          fill.style.width = '0%';
+          el.classList.remove('is-previewing');
         }
 
-        function updateBar() {
-          if (!thumb.classList.contains('is-previewing')) return;
-          var duration = video.duration || PREVIEW_MAX_SECONDS;
-          var progress = Math.min(video.currentTime / duration, 1);
-          fill.style.width = (progress * 100) + '%';
-          if (video.currentTime >= PREVIEW_MAX_SECONDS) {
-            video.currentTime = 0;
-          }
-          rafId = requestAnimationFrame(updateBar);
-        }
-
-        function startPreview() {
-          thumb.classList.add('is-previewing');
-          video.play().catch(function () {
-            thumb.classList.remove('is-previewing');
-          });
-          rafId = requestAnimationFrame(updateBar);
-        }
-
-        thumb.addEventListener('mouseenter', function () {
-          hoverTimer = setTimeout(startPreview, PREVIEW_DELAY);
+        el.addEventListener('mouseenter', function () {
+          timer = setTimeout(showIframe, DELAY);
         });
 
-        thumb.addEventListener('mouseleave', stopPreview);
-      });
+        el.addEventListener('mouseleave', hideIframe);
+      }
+
+      // Landscape video cards
+      document.querySelectorAll('.thumb[data-video-id]').forEach(attachPreview);
+
+      // Portrait shorts
+      document.querySelectorAll('.short-box[data-video-id]').forEach(attachPreview);
     })();
   </script>
+
 </body>
 </html>

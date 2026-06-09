@@ -171,11 +171,10 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 2px;
 }
 
 .logo-img {
-  
   height: auto;
 }
 
@@ -545,7 +544,7 @@ a {
   font-weight: 700;
 }
 
-/* Thumbnail hover preview — YouTube-style video + progress bar (added by Cursor assistant) */
+/* Thumbnail hover preview — iframe version */
 .thumb-link {
   display: block;
   border-radius: 8px;
@@ -556,58 +555,42 @@ a {
   outline-offset: 2px;
 }
 
-.thumb-preview-video {
+/* iframe injected on hover */
+.thumb-preview-iframe {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border: 0;
   border-radius: inherit;
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.15s ease;
 }
 
-.thumb.is-previewing .thumb-preview-video {
-  opacity: 1;
-}
-
+/* hide static thumbnail image while previewing */
 .thumb.is-previewing > img {
   opacity: 0;
-}
-
-.thumb-preview-bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.35);
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  pointer-events: none;
-}
-
-.thumb.is-previewing .thumb-preview-bar {
-  opacity: 1;
 }
 
 .thumb.is-previewing::before {
   opacity: 0;
 }
 
-.thumb-preview-bar-fill {
-  display: block;
-  height: 100%;
-  width: 0%;
-  background: var(--red);
-  border-radius: 0 2px 2px 0;
-  transition: width 0.05s linear;
+/* short-box iframe preview */
+.short-box.is-previewing > img {
+  opacity: 0;
 }
 
-
+.short-box .thumb-preview-iframe {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
 
 .video-info {
   margin-top: 12px;
@@ -666,7 +649,6 @@ a {
   font-weight: 800;
   line-height: 1;
 }
-
 
 .short h3 {
   margin-top: 10px;
@@ -852,4 +834,5 @@ a {
   object-fit: cover;
   display: block;
   border-radius: inherit;
+  transition: opacity 0.15s ease;
 }
